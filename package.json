@@ -1,0 +1,21 @@
+{
+  "name": "starline-catalog",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "data": "python3 -I scripts/build_data.py"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^6.0.6",
+    "astro": "^7.3.8",
+    "preact": "^10.29.8"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "sharp": true
+  }
+}
