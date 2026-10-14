@@ -29,7 +29,8 @@ const updated = new Date(catalog.updated).toLocaleDateString('ru-RU', { day: 'nu
           <span class="brand__mark" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
           </span>
-          <span>Охранные комплексы <span class="brand__tag">демо</span></span>
+          <span class="brand__text">Охранные комплексы <span class="brand__tag">демо</span></span>
+          <span class="sr-only">На главную</span>
         </a>
         <nav class="site-nav" aria-label="Разделы">
           <a href={base} aria-current={current === 'catalog' ? 'page' : undefined}>Каталог</a>
