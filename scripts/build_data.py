@@ -129,7 +129,9 @@ def attrs(p, m, funcs):
         'can': m.get(K_CAN) if isinstance(m.get(K_CAN), str) else 'нет',
         'link': link_of(p, m),
         'gps': m.get(K_GPS) is True,
-        'relay': m.get(K_RELAY) if isinstance(m.get(K_RELAY), str) else 'нет',
+        'relay': m.get(K_RELAY).replace('StarLine ', '') if isinstance(m.get(K_RELAY), str) else 'нет',
+        # Поколение серии A: A63/A93 v3 и A60/A90 иначе совпадают по всем осям (A93 v3 BT = A90 BT)
+        'gen': ('v3' if ' v3' in p['name'] else 'v2') if family(p['slug']) == 'a' else '',
     }
 
 order = [i['url'] for i in cat['items']]

@@ -12,6 +12,7 @@ export interface Attrs {
   link: string;
   gps: boolean;
   relay: string;
+  gen: string;
 }
 
 export interface Feature { title: string; text: string; icon: string | null }
@@ -65,6 +66,8 @@ type AxisKey = keyof Attrs;
 export interface Axis { key: AxisKey; title: string; weight: number; label: (v: Attrs[AxisKey]) => string; hint?: string }
 
 export const AXES: Axis[] = [
+  { key: 'gen', title: 'Поколение', weight: 6, label: (v) => (v === 'v3' ? 'A63 / A93 v3' : v === 'v2' ? 'A60 / A90' : '—'),
+    hint: 'v3 – новее: обход иммобилайзера, управление по Bluetooth со смартфона' },
   { key: 'autostart', title: 'Автозапуск', weight: 5, label: (v) => (v ? 'С автозапуском' : 'Без автозапуска'),
     hint: 'Запуск двигателя по времени, температуре или со смартфона' },
   { key: 'tags', title: 'Метки', weight: 3, label: (v) => (v === 0 ? 'Без метки' : v === 1 ? '1 метка' : '2 метки'),
@@ -87,7 +90,7 @@ export interface AxisView { axis: Axis; options: AxisOption[] }
 const same = (a: unknown, b: unknown) => a === b;
 
 // Порядок значений внутри оси: «нет» первым, дальше от простого к богатому.
-const ORDER = ['нет', 'GSM', '4G', 'LoRa', '2CAN+2LIN', '2CAN+4LIN', '3CAN+FD+4LIN', 'ЖК-брелок', 'ЖК-брелок + доп.', 'BT-брелок'];
+const ORDER = ['нет', 'v2', 'v3', 'GSM', '4G', 'LoRa', '2CAN+2LIN', '2CAN+4LIN', '3CAN+FD+4LIN', 'ЖК-брелок', 'ЖК-брелок + доп.', 'BT-брелок'];
 const rank = (v: unknown) => (typeof v === 'number' ? v : typeof v === 'boolean' ? Number(v) : ORDER.indexOf(String(v)) + 1 || 99);
 
 /** Отличия b от a по осям (кроме оси skip) – подписи «было → стало». */

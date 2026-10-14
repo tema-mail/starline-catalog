@@ -20,6 +20,7 @@ const rub = (n: number) => n.toLocaleString('ru-RU') + ' ₽';
 
 export default function CompareTable({ items, sections, presets, base }: Props) {
   const list = useCompare();
+  const [ready, setReady] = useState(false);
   const [diffOnly, setDiffOnly] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -27,12 +28,15 @@ export default function CompareTable({ items, sections, presets, base }: Props) 
   useEffect(() => {
     const ids = new URLSearchParams(location.search).get('ids');
     if (!ids) return;
-    const valid = ids.split(',').filter((s) => items.some((i) => i.slug === s)).slice(0, COMPARE_MAX);
+    const valid = [...new Set(ids.split(','))].filter((s) => items.some((i) => i.slug === s)).slice(0, COMPARE_MAX);
     if (valid.length) writeCompare(valid);
     history.replaceState(null, '', location.pathname);
   }, []);
+  useEffect(() => setReady(true), []);
 
   const chosen = list.map((s) => items.find((i) => i.slug === s)).filter((i): i is CmpItem => !!i);
+
+  if (!ready) return <p class="muted">Загружаем сравнение…</p>;
 
   if (chosen.length === 0) {
     return (
@@ -54,11 +58,12 @@ export default function CompareTable({ items, sections, presets, base }: Props) 
       title: 'Главное',
       rows: [
         { key: 'price', title: 'Цена', values: chosen.map((p) => ({ kind: 'text', text: rub(p.price) })) },
-        ...AXES.map((a) => ({
+        ...AXES.filter((a) => chosen.some((p) => p.attrs[a.key] !== '')).map((a) => ({
           key: a.key, title: a.title, desc: a.hint,
           values: chosen.map((p) => {
             const v = p.attrs[a.key];
-            const off = v === false || v === 0 || v === 'нет' || v === 'опция';
+            if (v === 'опция') return { kind: 'option', text: 'Опция' };
+            const off = v === false || v === 0 || v === 'нет' || v === '';
             return { kind: off ? 'no' : 'text', text: a.label(v) };
           }),
         })),
@@ -88,7 +93,7 @@ export default function CompareTable({ items, sections, presets, base }: Props) 
       <div class="cmp-bar">
         <div class="seg" role="group" aria-label="Какие параметры показывать">
           <button type="button" aria-pressed={!diffOnly} onClick={() => setDiffOnly(false)}>Все параметры</button>
-          <button type="button" aria-pressed={diffOnly} onClick={() => setDiffOnly(true)}>Только различия · {nDiff}</button>
+          <button type="button" aria-pressed={diffOnly} disabled={chosen.length < 2} title={chosen.length < 2 ? 'Добавьте второй товар' : undefined} onClick={() => setDiffOnly(true)}>Только различия · {nDiff}</button>
         </div>
         <div class="toolbar__right">
           <button type="button" class="linkbtn" onClick={share}>{copied ? 'Ссылка скопирована' : 'Поделиться'}</button>
@@ -122,7 +127,7 @@ export default function CompareTable({ items, sections, presets, base }: Props) 
           </thead>
           <tbody>
             {groups.map((g) => {
-              const rows = g.rows.filter((r) => !diffOnly || differs(r));
+              const rows = g.rows.filter((r) => !diffOnly || chosen.length < 2 || differs(r));
               if (!rows.length) return null;
               return [
                 <tr class="cmp-sec" key={g.title}><th scope="rowgroup" colSpan={chosen.length + 1}>{g.title}</th></tr>,
