@@ -1,0 +1,21 @@
+---
+// Карточка товара: своя страница у каждого варианта, внутри – переключение комплектаций серии без перезагрузки.
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard';
+import { catalog, familyOf, membersOf, rub, type Product } from '../../lib/catalog';
+
+export function getStaticPaths() {
+  return catalog.products.map((p) => ({ params: { slug: p.slug }, props: { product: p } }));
+}
+const { product } = Astro.props as { product: Product };
+const fam = familyOf(product);
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<Base title={`${product.name} – ${rub(product.price)}`} description={product.lead.slice(0, 160)}>
+  <nav class="crumbs" aria-label="Навигация">
+    <a href={base}>Каталог</a><span aria-hidden="true">/</span>
+    <a href={`${base}?s=${fam.key}`}>{fam.title}</a><span aria-hidden="true">/</span>
+    <span>{product.name}</span>
+  </nav>
+  <ProductCard client:load members={membersOf(fam)} initial={product.slug} familyTitle={fam.title} base={base} />
+</Base>
