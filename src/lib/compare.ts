@@ -8,7 +8,7 @@ export const COMPARE_MAX = 6;
 export function readCompare(): string[] {
   try {
     const v = JSON.parse(localStorage.getItem(KEY) || '[]');
-    return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : [];
+    return Array.isArray(v) ? [...new Set(v.filter((x): x is string => typeof x === 'string'))] : [];
   } catch {
     return [];
   }

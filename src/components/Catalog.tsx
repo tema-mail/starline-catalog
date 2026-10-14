@@ -1,6 +1,6 @@
 // Каталог: фильтр по функциям (как на store.starline.ru), серии и цене, сортировка, кнопка «в сравнение».
 // Состояние фильтра живёт в адресе (?f=…&s=…&p=…&o=…), чтобы подборку можно было переслать ссылкой.
-import { useEffect, useMemo, useState } from 'preact/hooks';
+import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { Attrs } from '../lib/catalog';
 import { COMPARE_MAX, toggleCompare, useCompare } from '../lib/compare';
 
@@ -23,7 +23,7 @@ const PRICES = [
   { key: 'gt35', title: 'от 35 000 ₽', test: (n: number) => n >= 35000 },
 ];
 const SORTS = [
-  { key: 'pop', title: 'Сначала популярные' },
+  { key: 'pop', title: 'Как в магазине StarLine' },
   { key: 'cheap', title: 'Сначала дешевле' },
   { key: 'dear', title: 'Сначала дороже' },
 ];
@@ -59,11 +59,13 @@ export default function Catalog({ items, filters, families, base }: Props) {
   const [price, setPrice] = useState('all');
   const [sort, setSort] = useState('pop');
   const [toast, setToast] = useState('');
+  const toastTimer = useRef<ReturnType<typeof setTimeout>>();
   const compare = useCompare();
 
   useEffect(() => {
     const s = readUrl();
-    setFuncs(s.funcs.filter((f) => filters.some((x) => x.key === f)));
+    const f = s.funcs.filter((k) => filters.some((x) => x.key === k));
+    setFuncs(f.filter((k) => !(k === 'WO_AUTOZ' && f.includes('AUTOZ'))));
     setFamily(families.some((f) => f.key === s.family) ? s.family : 'all');
     setPrice(PRICES.some((p) => p.key === s.price) ? s.price : 'all');
     setSort(SORTS.some((x) => x.key === s.sort) ? s.sort : 'pop');
@@ -106,7 +108,8 @@ export default function Catalog({ items, filters, families, base }: Props) {
   const onCompare = (slug: string) => {
     if (!toggleCompare(slug)) {
       setToast(`В сравнении уже ${COMPARE_MAX} товаров – уберите один, чтобы добавить новый`);
-      setTimeout(() => setToast(''), 3500);
+      clearTimeout(toastTimer.current);
+      toastTimer.current = setTimeout(() => setToast(''), 3500);
     }
   };
 
@@ -174,7 +177,7 @@ export default function Catalog({ items, filters, families, base }: Props) {
 
         {shown.length === 0 ? (
           <div class="empty">
-            <p>Под такой набор функций комплексов нет.</p>
+            <p>Под такой фильтр комплексов нет.</p>
             <button type="button" class="btn btn--ghost" onClick={reset}>Сбросить фильтр</button>
           </div>
         ) : (

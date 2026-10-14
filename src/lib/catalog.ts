@@ -67,7 +67,7 @@ export interface Axis { key: AxisKey; title: string; weight: number; label: (v: 
 
 export const AXES: Axis[] = [
   { key: 'gen', title: 'Поколение', weight: 6, label: (v) => (v === 'v3' ? 'A63 / A93 v3' : v === 'v2' ? 'A60 / A90' : '—'),
-    hint: 'v3 – новее: обход иммобилайзера, управление по Bluetooth со смартфона' },
+    hint: 'Две линейки серии A с разным составом комплекта' },
   { key: 'autostart', title: 'Автозапуск', weight: 5, label: (v) => (v ? 'С автозапуском' : 'Без автозапуска'),
     hint: 'Запуск двигателя по времени, температуре или со смартфона' },
   { key: 'tags', title: 'Метки', weight: 3, label: (v) => (v === 0 ? 'Без метки' : v === 1 ? '1 метка' : '2 метки'),

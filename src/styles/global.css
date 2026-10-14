@@ -150,7 +150,6 @@ main{ flex:1 0 auto; padding-block:var(--sp-m) var(--sp-xl); }
 .pcard__name::after{ content:""; position:absolute; inset:0; }
 .pills{ display:flex; flex-wrap:wrap; gap:var(--sp-3xs); }
 .pill{ padding:2px 8px; border-radius:999px; background:var(--surface-2); font-size:0.75rem; font-weight:700; line-height:1.5; color:var(--muted); }
-.pill--on{ background:var(--accent-soft); color:var(--accent); }
 .pcard__foot{ display:flex; align-items:center; justify-content:space-between; gap:var(--sp-3xs); margin-top:auto; padding-top:var(--sp-2xs); }
 .price{ font-size:var(--fs-l); font-weight:800; white-space:nowrap; }
 .cmp-toggle{
