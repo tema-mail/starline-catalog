@@ -4,3 +4,4 @@ dist/
 .DS_Store
 data/raw/pages/
 data/raw/*.html
+data/raw/img-cache/

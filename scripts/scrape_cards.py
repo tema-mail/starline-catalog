@@ -26,6 +26,7 @@ while queue:
         open(fn,'w').write(s); time.sleep(0.3)
     s=open(fn).read()
     p={'url':u,'slug':slug,'inCatalog':u in urls}
+    m=re.search(r'id="item-id" value="(\d+)"',s); p['id']=m.group(1) if m else None
     m=re.search(r'<h1>(.*?)</h1>',s,re.S); p['name']=txt(m.group(1)) if m else slug
     m=re.search(r'<h2 itemprop="name">\s*<em>(.*?)</em></br>(.*?)</h2>',s,re.S); p['type']=txt(m.group(2)) if m else ''
     m=re.search(r'<p class="item-description" itemprop="description">(.*?)</p>',s,re.S); p['lead']=txt(m.group(1)) if m else ''
