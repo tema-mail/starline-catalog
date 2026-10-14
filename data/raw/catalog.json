@@ -1,0 +1,590 @@
+{
+ "features": [
+  {
+   "name": "FILTER_OTHER_KASKO",
+   "val": "96",
+   "title": "Скидка на КАСКО"
+  },
+  {
+   "name": "FILTER_OTHER_SPLIT",
+   "val": "97",
+   "title": "Оплата частями"
+  },
+  {
+   "name": "FILTER_CH_AUTOZ",
+   "val": "62",
+   "title": "Автозапуск"
+  },
+  {
+   "name": "FILTER_CH_PHONE_CONTROL",
+   "val": "63",
+   "title": "Управление с телефона"
+  },
+  {
+   "name": "FILTER_CH_FREE_MONITORING",
+   "val": "64",
+   "title": "Бесплатный мониторинг"
+  },
+  {
+   "name": "FILTER_CH_BLUETOOTH",
+   "val": "65",
+   "title": "Умная авторизация по метке"
+  },
+  {
+   "name": "FILTER_CH_PODOG",
+   "val": "66",
+   "title": "Управление предпусковым подогревом"
+  },
+  {
+   "name": "FILTER_CH_CAN",
+   "val": "68",
+   "title": "Блокировка двигателя по CAN"
+  },
+  {
+   "name": "FILTER_CH_FREE",
+   "val": "69",
+   "title": "Режим «Свободные руки»"
+  },
+  {
+   "name": "FILTER_CH_DIAG",
+   "val": "76",
+   "title": "Умная автодиагностика"
+  },
+  {
+   "name": "FILTER_CH_FUEL",
+   "val": "77",
+   "title": "Данные о пробеге и уровне топлива"
+  },
+  {
+   "name": "FILTER_CH_ONLINE_MONITORING",
+   "val": "93",
+   "title": "Онлайн мониторинг"
+  },
+  {
+   "name": "FILTER_CH_WO_AUTOZ",
+   "val": "99",
+   "title": "Без автозапуска"
+  },
+  {
+   "name": "FILTER_CH_PAIDPARKING",
+   "val": "120",
+   "title": "Удобная оплата парковок в приложении StarLine"
+  }
+ ],
+ "purpose": [
+  [
+   "14002",
+   "Легковой автомобиль"
+  ],
+  [
+   "14004",
+   "Грузовой транспорт"
+  ]
+ ],
+ "items": [
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "name": "StarLine E97 LoRa",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e97_lora_eco/",
+   "name": "StarLine E97 LoRa ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e67_lora_eco/",
+   "name": "StarLine E67 LoRa ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "name": "StarLine B97 V2 3CAN+FD+4LIN LTE GPS",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "name": "StarLine E7 LTE GPS",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "name": "StarLine S7 GPS",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "name": "StarLine S66 v2 Mini",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "name": "StarLine S97 GPS",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "name": "StarLine E97 GSM GPS",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a93_v3_bt/",
+   "name": "StarLine A93 v3 BT",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "name": "StarLine A60 BT GSM ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a93_v3_bt_eco/",
+   "name": "StarLine A93 v3 BT ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a63_v3_bt_eco/",
+   "name": "StarLine A63 v3 BT ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a60_BT/",
+   "name": "StarLine A60 BT",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a90_bt/",
+   "name": "StarLine A90 BT",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_as90eco/",
+   "name": "StarLine AS90 ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a90_eco/",
+   "name": "StarLine A90 ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a60_eco/",
+   "name": "StarLine A60 ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "name": "StarLine B97 V2 3CAN+FD+4LIN LTE",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "name": "StarLine S96 v2  LTE GPS PRO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "name": "StarLine  S96 v2 GPS",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "name": "StarLine S96 v2 LTE",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "name": "StarLine S96 v2  LTE GPS",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "name": "StarLine S66 v2 LTE",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "name": "StarLine S66 v2 ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "name": "StarLine S96 v2 ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "name": "StarLine E96 v2 GSM ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "name": "StarLine S66 v2",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "name": "StarLine S96 v2",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_t94_v2/",
+   "name": "StarLine T94 v2",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e97/",
+   "name": "StarLine E97",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "name": "StarLine A93 v2 2CAN+2LIN LTE ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/",
+   "name": "StarLine E66 v2 GSM ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin_eco/",
+   "name": "StarLine A93 v2 2CAN+2LIN ECO",
+   "img": null
+  },
+  {
+   "url": "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin/",
+   "name": "StarLine A93 v2 2CAN+2LIN",
+   "img": null
+  }
+ ],
+ "map": {
+  "FILTER_OTHER_KASKO": [
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/"
+  ],
+  "FILTER_OTHER_SPLIT": [
+   "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "/catalog/avtosignalizatsii/starline_e97_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_e67_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a63_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt/",
+   "/catalog/avtosignalizatsii/starline_a60_BT/",
+   "/catalog/avtosignalizatsii/starline_a90_bt/",
+   "/catalog/avtosignalizatsii/starline_as90eco/",
+   "/catalog/avtosignalizatsii/starline_a90_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_t94_v2/",
+   "/catalog/avtosignalizatsii/starline_e97/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin/"
+  ],
+  "FILTER_CH_AUTOZ": [
+   "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "/catalog/avtosignalizatsii/starline_e97_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt/",
+   "/catalog/avtosignalizatsii/starline_a90_bt/",
+   "/catalog/avtosignalizatsii/starline_as90eco/",
+   "/catalog/avtosignalizatsii/starline_a90_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_t94_v2/",
+   "/catalog/avtosignalizatsii/starline_e97/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin/"
+  ],
+  "FILTER_CH_PHONE_CONTROL": [
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_as90eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/"
+  ],
+  "FILTER_CH_FREE_MONITORING": [
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/"
+  ],
+  "FILTER_CH_BLUETOOTH": [
+   "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_a63_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_BT/",
+   "/catalog/avtosignalizatsii/starline_a90_bt/",
+   "/catalog/avtosignalizatsii/starline_as90eco/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e97/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/"
+  ],
+  "FILTER_CH_PODOG": [
+   "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "/catalog/avtosignalizatsii/starline_e97_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_e67_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt/",
+   "/catalog/avtosignalizatsii/starline_a60_BT/",
+   "/catalog/avtosignalizatsii/starline_a90_bt/",
+   "/catalog/avtosignalizatsii/starline_as90eco/",
+   "/catalog/avtosignalizatsii/starline_a90_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e97/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin/"
+  ],
+  "FILTER_CH_CAN": [
+   "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "/catalog/avtosignalizatsii/starline_e97_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e67_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e97/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin/"
+  ],
+  "FILTER_CH_FREE": [
+   "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "/catalog/avtosignalizatsii/starline_e97_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_e67_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_as90eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e97/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/"
+  ],
+  "FILTER_CH_DIAG": [
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/"
+  ],
+  "FILTER_CH_FUEL": [
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/"
+  ],
+  "FILTER_CH_ONLINE_MONITORING": [
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/"
+  ],
+  "FILTER_CH_WO_AUTOZ": [
+   "/catalog/avtosignalizatsii/starline_e67_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_a63_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_BT/",
+   "/catalog/avtosignalizatsii/starline_a60_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/"
+  ],
+  "FILTER_CH_PAIDPARKING": [
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/"
+  ]
+ },
+ "pmap": {
+  "14002": [
+   "/catalog/avtosignalizatsii/starline_e97_lora/",
+   "/catalog/avtosignalizatsii/starline_e97_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_e67_lora_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_gps_r6l/",
+   "/catalog/avtosignalizatsii/starline_e7_lte_gps/",
+   "/catalog/avtosignalizatsii/starline_s7_gps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_mini/",
+   "/catalog/avtosignalizatsii/starline_s97_gps/",
+   "/catalog/avtosignalizatsii/starline_e97_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt/",
+   "/catalog/avtosignalizatsii/starline_a60_BT_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a63_v3_bt_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_BT/",
+   "/catalog/avtosignalizatsii/starline_a90_bt/",
+   "/catalog/avtosignalizatsii/starline_as90eco/",
+   "/catalog/avtosignalizatsii/starline_a90_eco/",
+   "/catalog/avtosignalizatsii/starline_a60_eco/",
+   "/catalog/avtosignalizatsii/starline_b97_v2_fd_lte_r7/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps_pro/",
+   "/catalog/avtosignalizatsii/starline_s96v2_bt_gsm_gps/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_lte/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_ltegps/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_lte/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_eco_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e96_v2_bt_gsm_eco/",
+   "/catalog/avtosignalizatsii/starline_s66_v2_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_s96_bt_2can_4lin_2sim_gsm/",
+   "/catalog/avtosignalizatsii/starline_e97/",
+   "/catalog/avtosignalizatsii/starline_a93_2can_2lin_lte_eco/",
+   "/catalog/avtosignalizatsii/starline_e66_v2_bt_eco_2can_4lin_gsm/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin_eco/",
+   "/catalog/avtosignalizatsii/starline_a93_v2_2can_2lin/"
+  ],
+  "14004": [
+   "/catalog/avtosignalizatsii/starline_t94_v2/"
+  ]
+ }
+}
