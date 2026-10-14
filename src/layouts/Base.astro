@@ -1,0 +1,52 @@
+---
+// Общий макет: шапка с переходом в сравнение, подвал с источником данных.
+import '../styles/global.css';
+import { catalog } from '../lib/catalog';
+
+interface Props { title: string; description: string; current?: 'catalog' | 'compare' }
+const { title, description, current } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const noindex = import.meta.env.PUBLIC_NOINDEX === '1';
+const updated = new Date(catalog.updated).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-hdr">
+      <div class="page site-hdr__in">
+        <a class="brand" href={base}>
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <span>Охранные комплексы <span class="brand__tag">демо</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Разделы">
+          <a href={base} aria-current={current === 'catalog' ? 'page' : undefined}>Каталог</a>
+          <a href={`${base}compare/`} aria-current={current === 'compare' ? 'page' : undefined}>
+            Сравнение <span class="count" data-cmp-count hidden>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="page"><slot /></div>
+    </main>
+    <footer class="site-ftr">
+      <div class="page">
+        <p>Демо-прототип каталога. Товары, фото, цены и характеристики – с store.starline.ru на {updated}; цены могут отличаться.</p>
+      </div>
+    </footer>
+    <slot name="after" />
+  </body>
+</html>

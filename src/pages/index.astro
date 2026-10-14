@@ -1,0 +1,27 @@
+---
+// Каталог охранных комплексов StarLine.
+import Base from '../layouts/Base.astro';
+import { catalog, familyOf, rub } from '../lib/catalog';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const n = catalog.products.length;
+---
+<Base title="Охранные комплексы StarLine – каталог" description={`${n} охранных комплексов StarLine: подбор по функциям, сравнение и комплектации.`} current="catalog">
+  <header class="cat-head">
+    <h1>Охранные комплексы StarLine</h1>
+    <p class="lead">{n} комплексов: подберите по функциям, сравните и соберите комплектацию.</p>
+  </header>
+  <div class="grid">
+    {catalog.products.map((p) => (
+      <article class="pcard">
+        <a class="pcard__img" href={`${base}catalog/${p.slug}/`} tabindex="-1" aria-hidden="true">
+          {p.image && <img src={base + p.image} alt="" width="400" height="300" loading="lazy" decoding="async" />}
+        </a>
+        <div class="pcard__body">
+          <span class="pcard__series">{familyOf(p).title}</span>
+          <a class="pcard__name" href={`${base}catalog/${p.slug}/`}>{p.name}</a>
+          <div class="pcard__foot"><span class="price">{rub(p.price)}</span></div>
+        </div>
+      </article>
+    ))}
+  </div>
+</Base>
