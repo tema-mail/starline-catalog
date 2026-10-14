@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   <nav class="crumbs" aria-label="Навигация">
     <a href={base}>Каталог</a><span aria-hidden="true">/</span>
     <a href={`${base}?s=${fam.key}`}>{fam.title}</a><span aria-hidden="true">/</span>
-    <span>{product.name}</span>
+    <span data-crumb-name>{product.name}</span>
   </nav>
   <ProductCard client:load members={membersOf(fam)} initial={product.slug} familyTitle={fam.title} base={base} />
 </Base>

@@ -48,7 +48,12 @@ export default function ProductCard({ members, initial, familyTitle, base }: Pro
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
-  useEffect(() => { document.title = `${p.name} – ${rub(p.price)}`; }, [p]);
+  // Заголовок вкладки и последнее звено крошек (их рендерит страница) – под текущий вариант.
+  useEffect(() => {
+    document.title = `${p.name} – ${rub(p.price)}`;
+    const crumb = document.querySelector('[data-crumb-name]');
+    if (crumb) crumb.textContent = p.name;
+  }, [p]);
 
   const go = (target: Product, changes: string[]) => {
     if (target.slug === slug) return;
@@ -59,9 +64,8 @@ export default function ProductCard({ members, initial, familyTitle, base }: Pro
     history.pushState(null, '', pageUrl(target.slug));
   };
 
-  const onCompare = () => {
-    if (!toggleCompare(p.slug)) alert(`В сравнении уже ${COMPARE_MAX} товаров – уберите один в лотке внизу.`);
-  };
+  const [full2, setFull2] = useState(false);
+  const onCompare = () => setFull2(!toggleCompare(p.slug));
 
   const tabs: { key: Tab; title: string; n?: number }[] = [
     { key: 'features', title: 'Характеристики', n: p.features.reduce((n, g) => n + g.items.length, 0) },
@@ -95,6 +99,7 @@ export default function ProductCard({ members, initial, familyTitle, base }: Pro
               {inCmp ? '✓ В сравнении – убрать' : 'Добавить в сравнение'}
             </button>
             <a class="btn btn--ghost btn--wide" href={`https://store.starline.ru/catalog/avtosignalizatsii/${p.slug}/`} target="_blank" rel="noopener">Открыть на store.starline.ru</a>
+            {full2 && !inCmp && <p class="buy__note" role="alert">В сравнении уже {COMPARE_MAX} товаров – уберите один в лотке внизу.</p>}
             <p class="buy__note">Демо: оформление заказа не подключено.</p>
           </div>
         </div>
@@ -111,7 +116,7 @@ export default function ProductCard({ members, initial, familyTitle, base }: Pro
             <section class="conf" aria-labelledby="conf-h">
               <div class="conf__head">
                 <h2 id="conf-h">Комплектация</h2>
-                <span class="muted">{members.length} вариантов в серии</span>
+                <span class="muted">Вариантов в серии: {members.length}</span>
               </div>
               {axes.map(({ axis, options }) => (
                 <div class="conf__axis" role="group" aria-labelledby={`ax-${axis.key}`}>
