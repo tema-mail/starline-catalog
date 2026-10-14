@@ -2,11 +2,13 @@
 // Общий макет: шапка с переходом в сравнение, подвал с источником данных.
 import '../styles/global.css';
 import { catalog } from '../lib/catalog';
+import CompareTray from '../components/CompareTray';
 
 interface Props { title: string; description: string; current?: 'catalog' | 'compare' }
 const { title, description, current } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const noindex = import.meta.env.PUBLIC_NOINDEX === '1';
+const trayItems = catalog.products.map(({ slug, name, image }) => ({ slug, name, image }));
 const updated = new Date(catalog.updated).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <!doctype html>
@@ -48,6 +50,6 @@ const updated = new Date(catalog.updated).toLocaleDateString('ru-RU', { day: 'nu
         <p>Демо-прототип каталога. Товары, фото, цены и характеристики – с store.starline.ru на {updated}; цены могут отличаться.</p>
       </div>
     </footer>
-    <slot name="after" />
+    <CompareTray client:load items={trayItems} base={base} hide={current === 'compare'} />
   </body>
 </html>

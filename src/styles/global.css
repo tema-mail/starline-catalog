@@ -137,7 +137,8 @@ main{ flex:1 0 auto; padding-block:var(--sp-m) var(--sp-xl); }
 .grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--sp-2xs); }
 .grid > *{ min-width:0; }
 .toast{ position:fixed; left:50%; bottom:calc(100px + env(safe-area-inset-bottom)); z-index:40; width:min(92vw,420px); margin:0; padding:var(--sp-xs) var(--sp-s); transform:translateX(-50%); border-radius:var(--r-m); background:var(--text); color:var(--bg); font-size:var(--fs-s); font-weight:700; box-shadow:var(--shadow); animation:tray-in .3s var(--ease); }
-.empty{ padding:var(--sp-l) var(--sp-s); border:1px dashed var(--line); border-radius:var(--r-l); text-align:center; color:var(--muted); }
+.empty .chips{ flex-wrap:wrap; justify-content:center; }
+.empty{ margin-block-start:var(--sp-s); padding:var(--sp-l) var(--sp-s); border:1px dashed var(--line); border-radius:var(--r-l); text-align:center; color:var(--muted); }
 
 .pcard{ position:relative; display:flex; flex-direction:column; border:1px solid var(--line-soft); border-radius:var(--r-m); background:var(--surface); overflow:clip; transition:box-shadow .2s var(--ease),transform .2s var(--ease); }
 .pcard:hover{ box-shadow:var(--shadow); transform:translateY(-2px); }
@@ -184,12 +185,12 @@ main{ flex:1 0 auto; padding-block:var(--sp-m) var(--sp-xl); }
 .seg{ display:inline-flex; padding:3px; border-radius:999px; background:var(--surface-2); }
 .seg button{ min-height:40px; padding:0 var(--sp-s); border:0; border-radius:999px; background:none; font-size:var(--fs-s); font-weight:800; cursor:pointer; color:var(--muted); }
 .seg button[aria-pressed="true"]{ background:var(--surface); color:var(--text); box-shadow:var(--shadow); }
-.cmp-scroll{ overflow-x:auto; overscroll-behavior-inline:contain; border:1px solid var(--line-soft); border-radius:var(--r-l); background:var(--surface); }
+.cmp-scroll{ max-height:calc(100svh - var(--hdr) - var(--sp-l)); overflow:auto; overscroll-behavior-inline:contain; border:1px solid var(--line-soft); border-radius:var(--r-l); background:var(--surface); }
 .cmp-table{ border-collapse:separate; border-spacing:0; min-width:max-content; font-size:var(--fs-s); }
-.cmp-table th,.cmp-table td{ width:200px; min-width:200px; max-width:200px; padding:var(--sp-2xs) var(--sp-xs); border-bottom:1px solid var(--line-soft); text-align:left; vertical-align:top; }
-.cmp-table th[scope="row"]{ position:sticky; left:0; z-index:2; width:150px; min-width:150px; max-width:150px; background:var(--surface); font-weight:700; border-right:1px solid var(--line-soft); }
+.cmp-table th,.cmp-table td{ width:150px; min-width:150px; max-width:150px; padding:var(--sp-2xs) var(--sp-xs); border-bottom:1px solid var(--line-soft); text-align:left; vertical-align:top; }
+.cmp-table th[scope="row"]{ position:sticky; left:0; z-index:2; width:116px; min-width:116px; max-width:116px; background:var(--surface); font-weight:700; border-right:1px solid var(--line-soft); }
 .cmp-table thead th{ position:sticky; top:0; z-index:3; background:var(--surface); vertical-align:bottom; }
-.cmp-table thead th:first-child{ left:0; z-index:4; }
+.cmp-table thead th:first-child{ left:0; z-index:4; width:116px; min-width:116px; max-width:116px; border-right:1px solid var(--line-soft); }
 .cmp-head{ display:grid; gap:var(--sp-3xs); }
 .cmp-head__img{ display:block; aspect-ratio:4/3; padding:var(--sp-3xs); border-radius:var(--r-s); background:var(--stage); }
 .cmp-head__img img{ width:100%; height:100%; object-fit:contain; }
@@ -300,7 +301,8 @@ main{ flex:1 0 auto; padding-block:var(--sp-m) var(--sp-xl); }
   .pd{ grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); align-items:start; gap:var(--sp-l); }
   .pd__media{ position:sticky; top:calc(var(--hdr) + var(--sp-s)); }
   .box{ grid-template-columns:repeat(4,minmax(0,1fr)); }
-  .cmp-table th[scope="row"]{ width:240px; min-width:240px; max-width:240px; }
+  .cmp-table th,.cmp-table td{ width:200px; min-width:200px; max-width:200px; }
+  .cmp-table th[scope="row"],.cmp-table thead th:first-child{ width:240px; min-width:240px; max-width:240px; }
 }
 @media (min-width:1024px){
   .grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }

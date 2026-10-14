@@ -1,0 +1,23 @@
+---
+// Сравнение охранных комплексов: список – из localStorage, таблица строится в острове.
+import Base from '../layouts/Base.astro';
+import CompareTable, { type CmpItem } from '../components/CompareTable';
+import { catalog, familyOf } from '../lib/catalog';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const P = catalog.products;
+const items: CmpItem[] = P.map((p) => ({
+  slug: p.slug, name: p.name, price: p.price, image: p.image, familyTitle: familyOf(p).title, attrs: p.attrs, params: p.params,
+}));
+const cheapest = (list: typeof P) => [...list].sort((a, b) => a.price - b.price).map((p) => p.slug);
+const presets = [
+  { title: 'Все S96 v2', slugs: P.filter((p) => p.name.includes('S96')).map((p) => p.slug) },
+  { title: 'С автозапуском до 15 000 ₽', slugs: cheapest(P.filter((p) => p.attrs.autostart && p.price < 15000)) },
+  { title: 'С GPS', slugs: cheapest(P.filter((p) => p.attrs.gps)) },
+  { title: 'Серия E', slugs: P.filter((p) => p.family === 'e').map((p) => p.slug) },
+].filter((p) => p.slugs.length > 1);
+---
+<Base title="Сравнение охранных комплексов StarLine" description="Сравнение охранных комплексов StarLine по функциям, комплектации и цене." current="compare">
+  <nav class="crumbs" aria-label="Навигация"><a href={base}>Каталог</a><span aria-hidden="true">/</span><span>Сравнение</span></nav>
+  <h1>Сравнение</h1>
+  <CompareTable client:load items={items} sections={catalog.params} presets={presets} base={base} />
+</Base>
