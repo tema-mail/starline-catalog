@@ -79,7 +79,6 @@ main{ flex:1 0 auto; padding-block:var(--sp-m) var(--sp-xl); }
 .brand__mark{ display:grid; place-items:center; width:32px; height:32px; border-radius:10px; background:var(--accent); color:var(--on-accent); }
 .brand__mark svg{ width:18px; height:18px; }
 .brand__text{ display:none; }
-.brand__tag{ font-size:var(--fs-xs); font-weight:600; color:var(--dim); }
 .site-nav{ display:flex; align-items:center; gap:var(--sp-3xs); }
 .site-nav a{ display:inline-flex; align-items:center; gap:var(--sp-3xs); min-height:var(--tap); padding-inline:var(--sp-xs); border-radius:999px; color:var(--text); text-decoration:none; font-size:var(--fs-s); font-weight:700; }
 .site-nav a[aria-current="page"]{ background:var(--surface-2); }

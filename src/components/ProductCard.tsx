@@ -100,7 +100,7 @@ export default function ProductCard({ members, initial, familyTitle, base }: Pro
             </button>
             <a class="btn btn--ghost btn--wide" href={`https://store.starline.ru/catalog/avtosignalizatsii/${p.slug}/`} target="_blank" rel="noopener">Открыть на store.starline.ru</a>
             {full2 && !inCmp && <p class="buy__note" role="alert">В сравнении уже {COMPARE_MAX} товаров – уберите один в лотке внизу.</p>}
-            <p class="buy__note">Демо: оформление заказа не подключено.</p>
+            <p class="buy__note">Цена ориентировочная, не окончательная – уточняйте перед заказом.</p>
           </div>
         </div>
 
