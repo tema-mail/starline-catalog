@@ -20,12 +20,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # Демо: подпапка репозитория, закрыто от индексации (данные и фото StarLine).
+      # Свой поддомен starline.teyes-sibir.ru (владелец 25.10), корень сайта; пока закрыт от индексации.
       - run: npm run build
         env:
-          PUBLIC_BASE: /starline-catalog
-          PUBLIC_SITE_URL: https://tema-mail.github.io/starline-catalog
+          PUBLIC_BASE: /
+          PUBLIC_SITE_URL: https://starline.teyes-sibir.ru
           PUBLIC_NOINDEX: '1'
+      - run: echo starline.teyes-sibir.ru > dist/CNAME
       - run: touch dist/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

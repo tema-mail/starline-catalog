@@ -5,7 +5,8 @@
 (метка / без метки и т.д.), без сопутствующих товаров. Источник – store.starline.ru/catalog/avtosignalizatsii/.
 
 Стек: Astro 7 + Preact-острова, чистый CSS (src/styles/global.css – единственный файл стилей).
-Демо: https://tema-mail.github.io/starline-catalog/ (GitHub Pages, workflow .github/workflows/pages.yml, noindex).
+Адрес: https://starline.teyes-sibir.ru/ (владелец 25.10; GitHub Pages, свой домен, workflow .github/workflows/pages.yml, noindex).
+DNS teyes-sibir.ru – reg.ru, но НЕ в нашем аккаунте API (DOMAIN_NOT_FOUND): запись CNAME starline → tema-mail.github.io ставит владелец/Codex.
 
 ## Данные
 - Сырые: `data/raw/` – снимаются `scripts/scrape_catalog.py`, `scrape_cards.py`, `scrape_compare.py` (в этом порядке, аргумент `data/raw`).
